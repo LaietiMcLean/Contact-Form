@@ -1,0 +1,294 @@
+:root {
+    --main: #fb716c; 
+    --primary: #fba36b;
+    --secondary: #fbb569;
+    --terciary: #fb8f6c;
+    
+    --mainPink: #f75373;
+    --primaryPink: #eb86a0;
+    --secondaryPink:  #efa7bb; 
+    --terciaryPink: #da5f7b; 
+
+    --white: #FFF;
+    --black: #000000;
+    --textFont: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--textFont);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background-image: url('../img/background-top.webp');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 30rem;
+    padding: 5rem 0;
+    opacity: .9;
+}
+
+@media (min-width: 500px) {
+    body {
+      background-size: 45rem;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+      background-size: 70rem;
+    }
+}
+
+@media (min-width: 1110px) {
+      body {
+        background-size: 90rem;
+      }
+}
+
+@media (min-width: 1600px) {
+    body {
+        background-size: 120rem;
+      }
+}
+
+/*Utilidades*/
+
+h1, h2, h3 {
+    font-weight: 900;
+    margin: 2rem 0;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4.6rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*Contenedor general / Layout*/
+
+.container {
+    background-color: transparent;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+@media (min-width: 1110px ) {
+    .container {
+        margin-top: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Info - bloque de texto - Sección*/
+
+.info {
+    display: grid;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.info__text {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+      .info {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 10rem;
+      }
+}
+
+.info__title {
+    color: var(--secondary);
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+@media (min-width: 500px) {
+    .info__title,
+    .info__text {
+      text-align: left;
+    } 
+}
+
+@media (min-width: 768px) {
+      .info__title {
+        font-size: 3rem;
+      }
+}
+
+@media (min-width: 1110px) {
+      .info__title {
+        font-size: 2.6rem;
+      }
+}
+
+@media (min-width: 1330px) {
+      .info__title {
+        font-size: 3rem;
+      }
+}
+
+/*Imagen que acompaña al bloque de texto*/
+
+.info__image {
+    background-image: url('../img/image-logo.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20rem;
+    padding: 5rem 0; 
+    padding-top: 12rem;
+    padding-bottom: 5rem;
+}
+
+
+@media (min-width: 768px) {
+    .info__image {
+        background-size: 30rem;
+        background-position: center right;
+        margin-right: 2rem;
+    }
+}
+
+@media (min-width: 1110px) {
+    .info__image {
+        background-size: 25rem;
+        background-position: center right;
+    }
+}
+
+/*Formulario - Sección*/
+
+.form {
+    margin: 0 auto;
+    justify-self: center;
+    min-width: 100%;
+}
+
+
+@media (min-width: 1110px) {
+    .form {
+      margin-top: 12rem;
+    }
+}
+
+@media (min-width: 500px) {
+    .form__data {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }  
+}
+
+
+ .form input,
+ .form textarea {
+    display: grid;
+    border: none;
+    border-radius: .3rem;
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .18);
+    font-weight: 300;
+    font-style: italic;
+    height: 4rem;
+    margin: 1rem;
+    padding-left: 2rem;
+}
+
+
+.form input:focus-visible,
+.form textarea:focus-visible {
+    outline: .1rem solid var(--secondary);
+}
+
+textarea {
+    resize: none;
+    min-height: 12rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.field {
+    display: grid; 
+} 
+
+@media (max-width: 500px) {
+      .field {
+        grid-auto-columns: max-content;
+        justify-content: center;
+      }
+}
+
+/*Botón*/
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    border-radius: .3rem;
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .10);
+    font-weight: 300;
+    height: 4rem;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+button:hover {
+    border-color: var(--main);
+    background-color: var(--main);
+    color: var(--white)
+}
+
+/*Modal Confirm - SweetAlert (Swal) - Button confirm*/
+
+.swal2-html-container {
+    font-size: 1.4em;
+    font-family: var(--textFont);
+    letter-spacing: .03rem;
+    margin: 1rem;
+}
+
+button.swal2-styled.swal2-confirm {
+    width: 100px;
+    border: none;
+    background-color: var(--primaryPink);
+}
+
+button.swal2-styled.swal2-confirm:hover {
+    width: 100px;
+    border: none;
+    outline-style: none;
+    background-color: var(--terciaryPink)
+}
+

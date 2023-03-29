@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Estilos y utilidades de estilo-------->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--Google Fonts-------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--SweetAlert / Modal de confirmación---->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--JavaScript---------------------------->
+    <script src="index.js"></script>
+    <title>Form Contact Webpage</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--INFO / BLOQUE DE TEXTO-------------------------------------------->
+      <div class="info">
+        <div class="info__image"></div>
+        <div class="info__text">
+          <h2 class="info__title">FORMULARIO DE INSCRIPCIÓN</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae
+            laborum, praesentium eveniet vero aut minus saepe atque ipsam ad,
+            sapiente placeat repellendus laudantium rem nostrum ipsum quo
+            officia facere earum!
+          </p>
+        </div>
+      </div>
+      <!--FORMULARIO-------------------------------------------------------->
+      <form class="form">
+        <div class="form__data">
+          <div class="field">
+            <input id="nombre" type="text" placeholder="Nombre" />
+          </div>
+          <div class="field">
+            <input id="apellidos" type="text" placeholder="Apellidos" />
+          </div>
+
+          <div class="field">
+            <input id="telefono" type="text" placeholder="Teléfono" />
+          </div>
+          <div class="field">
+            <input id="empresa" type="text" placeholder="Empresa" />
+          </div>
+        </div>
+        <div class="field">
+          <textarea
+            class="field"
+            name="comentarios"
+            id="comentarios"
+            cols="30"
+            rows="10"
+            placeholder="Comentarios"
+          ></textarea>
+        </div>
+        <div class="btn">
+          <button type="button" onclick="onConfirm()">ENVIAR</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
